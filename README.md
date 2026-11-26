@@ -26,7 +26,7 @@ This is a practice implementation, not the company's actual EMA v5 environment.
 
 ## Prerequisites
 
-Azure CLI, Terraform >= 1.6, kubectl, Helm, and an Azure subscription with quota for the selected VM size and Application Gateway Standard_v2.
+Azure CLI, Terraform >= 1.6, kubectl, Helm, and an Azure subscription with quota for the selected VM size and Application Gateway Standard_v2. The example defaults to `Standard_D2as_v5`; confirm quota for the `standardDASv5Family` in your subscription before applying.
 
 ## 1. Azure login and quota check
 
@@ -36,7 +36,7 @@ az account show --output table
 az vm list-usage --location malaysiawest --output table
 ```
 
-Check your subscription's regional vCPU quota and the selected VM family before creating anything. Change `location` and `node_vm_size` in `infrastructure/terraform/terraform.tfvars` to values available in your subscription.
+Check your subscription's regional vCPU quota and the selected VM family before creating anything. Change `location` and `node_vm_size` in `infrastructure/terraform/terraform.tfvars` to values available in your subscription. Your earlier `Standard_DSv5` quota issue is why this example uses the separate `DASv5` family; this is not a guarantee that your subscription has quota.
 
 ## 2. Create Azure infrastructure
 

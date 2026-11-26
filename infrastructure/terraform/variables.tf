@@ -13,7 +13,7 @@ variable "location" {
 variable "node_vm_size" {
   description = "VM size for system, blue and green pools. Must have quota in the selected region."
   type        = string
-  default     = "Standard_D2s_v5"
+  default     = "Standard_D2as_v5"
 }
 
 variable "system_node_count" {

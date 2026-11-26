@@ -58,7 +58,6 @@ resource "azurerm_kubernetes_cluster" "main" {
     vnet_subnet_id      = azurerm_subnet.aks.id
     type                = "VirtualMachineScaleSets"
     auto_scaling_enabled = false
-    only_critical_addons_enabled = true
     node_labels = {
       "workload-tier" = "system"
     }
