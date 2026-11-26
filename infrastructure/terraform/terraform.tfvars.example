@@ -1,0 +1,8 @@
+project_name        = "bgdemo"
+location            = "malaysiawest"
+node_vm_size        = "Standard_D2s_v5"
+system_node_count   = 1
+workload_node_count = 1
+kong_internal_ip    = "10.20.1.10"
+# Set kubernetes_version only if you need to pin a version supported in your region.
+# kubernetes_version = "1.xx.x"
