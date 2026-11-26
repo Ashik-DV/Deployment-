@@ -172,7 +172,7 @@ resource "azurerm_application_gateway" "main" {
     name                = "kong-health-probe"
     protocol            = "Http"
     path                = "/"
-    host                = "127.0.0.1"
+    host                = "bluegreen.example.com"
     interval            = 30
     timeout             = 10
     unhealthy_threshold = 3
